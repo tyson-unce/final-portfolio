@@ -4,7 +4,7 @@ import man2 from './assets/man2.jpeg';
 
 const Section = () => {
 	return (
-		<div className='section'>
+		<div className='section' id='aboutMe'>
 			<div className='section__container'>
 				<div className='section__img'>
 					<img src={man2} alt='' />

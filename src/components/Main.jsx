@@ -9,7 +9,7 @@ import man from './assets/man.png';
 
 const Main = () => {
 	return (
-		<div className='main'>
+		<div className='main' id='mainPage'>
 			<div className='main__container'>
 				<div className='main__content'>
 					<div className='text'>

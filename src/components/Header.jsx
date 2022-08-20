@@ -1,7 +1,8 @@
 import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from '@mui/icons-material/Menu';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
+
 import './styles/Header.scss';
 
 const Header = () => {
@@ -12,33 +13,33 @@ const Header = () => {
 	};
 
 	return (
-		<div className='header'>
-			<div className='header__logo'>
-				<h1>Leedd</h1>
-			</div>
-
+		<div className='header' id='theHeader'>
 			<nav className={active ? 'navbar active' : 'navbar'}>
-				<ul>
+				<ul className='list'>
 					<div className='closed'>
 						<CloseIcon className='close' onClick={showMenu} />
 					</div>
 					<li>
-						<Link to='/'>Home</Link>
+						<Link to='#mainPage' smooth>
+							Home
+						</Link>
 					</li>
 					<li>
-						<Link to='/'>About</Link>
+						<Link to='#aboutMe' smooth>
+							About me
+						</Link>
 					</li>
+
 					<li>
-						<Link to='/'>Portfolio</Link>
+						<Link to='#workspages' smooth>
+							Projects
+						</Link>
 					</li>
+
 					<li>
-						<Link to='/works'>Pages</Link>
-					</li>
-					<li>
-						<Link to='/'>Blog</Link>
-					</li>
-					<li>
-						<Link to='/contact'>Contact</Link>
+						<Link to='#contactpage' smooth>
+							Contact
+						</Link>
 					</li>
 				</ul>
 			</nav>

@@ -5,10 +5,7 @@ import './styles/Contact.scss';
 
 const Contact = () => {
 	return (
-		<div className='contact'>
-			<Link to='/'>
-				<ArrowBackIcon className='arrow' />
-			</Link>
+		<div className='contact' id='contactpage'>
 			<div className='inputs'>
 				<h1>Contact us</h1>
 				<input type='text' placeholder='Name' />
