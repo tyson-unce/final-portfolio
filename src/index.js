@@ -11,6 +11,13 @@ ReactDOM.render(
 			<Route path='/' element={<App />} />
 			<Route path='/contact' element={<Contact />} />
 			<Route path='/works' element={<Works />} />
+			<Route
+				path='/twitter'
+				component={() => {
+					window.location.href = 'https://twitter.com/home';
+					return null;
+				}}
+			/>
 		</Routes>
 	</Router>,
 	document.getElementById('root')

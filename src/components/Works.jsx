@@ -1,44 +1,77 @@
 import React from 'react';
-import react from './assets/react.jpeg';
-import ui from './assets/ui.jpeg';
-import wd from './assets/wd.jpeg';
-import wd2 from './assets/wd2.jpeg';
 import wd3 from './assets/wd3.jpeg';
-import wd4 from './assets/wd4.jpeg';
 import './styles/Works.scss';
+import netflix from './assets/netflixSS.png';
+import hopehacks from './assets/hopeHacksSS.png';
+import ecom from './assets/ecomSS.png';
+import bot from './assets/botSS.png';
 
 const Works = () => {
 	return (
 		<div className='works' id='workspages'>
 			<div className='work__section'>
 				<div className='cards'>
-					<img src={react} alt='' />
-					<button>See Work</button>
+					<img src={ecom} alt='' />
+					<a
+						href='https://www.smartproductsbytyson.com/'
+						target={'_blank'}
+						rel='noreferrer'
+					>
+						<button>Ecommerce site</button>
+					</a>
 				</div>
 
 				<div className='cards'>
-					<img src={ui} alt='' />
-					<button>See Work</button>
+					<img src={netflix} alt='' />
+					<a
+						href='https://main.d1zo0b1ozl1ups.amplifyapp.com/'
+						target={'_blank'}
+						rel='noreferrer'
+					>
+						<button>Netflix Clone</button>
+					</a>
 				</div>
 
 				<div className='cards'>
-					<img src={wd} alt='' />
-					<button>See Work</button>
-				</div>
-
-				<div className='cards'>
-					<img src={wd2} alt='' />
-					<button>See Work</button>
+					<img src={hopehacks} alt='' />
+					<a
+						href='https://hopehacks1.herokuapp.com/index'
+						target={'_blank'}
+						rel='noreferrer'
+					>
+						<button>HopeHacks project</button>
+					</a>
 				</div>
 
 				<div className='cards'>
 					<img src={wd3} alt='' />
-					<button>See Work</button>
+					<a
+						href='https://main.d1zo0b1ozl1ups.amplifyapp.com/'
+						target={'_blank'}
+						rel='noreferrer'
+					>
+						<button>See Work</button>
+					</a>
 				</div>
-
 				<div className='cards'>
-					<img src={wd4} alt='' />
-					<button>See Work</button>
+					<img src={bot} alt='' />
+					<a
+						href='https://master.d2t1q1va22szti.amplifyapp.com/'
+						target={'_blank'}
+						rel='noreferrer'
+					>
+						<button>See Work</button>
+					</a>
+				</div>
+				<div className='cards'>
+					<img src={bot} alt='' />
+					<a
+						href='https://master.d2t1q1va22szti.amplifyapp.com/'
+						target={'_blank'}
+						rel='noreferrer'
+					>
+						<button>See Work</button>
+					</a>
 				</div>
 			</div>
 		</div>

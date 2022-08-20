@@ -1,11 +1,10 @@
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import PinterestIcon from '@mui/icons-material/Pinterest';
 import TwitterIcon from '@mui/icons-material/Twitter';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import React from 'react';
 import './styles/Main.scss';
-import man from './assets/man.png';
 
 const Main = () => {
 	return (
@@ -13,27 +12,58 @@ const Main = () => {
 			<div className='main__container'>
 				<div className='main__content'>
 					<div className='text'>
-						<p>Hey There !</p>
-						<h1>I am Bob Russer</h1>
-						<p>Creative Art Director & Designer</p>
+						<p>Howdy!</p>
+						<h1>I am Tyson Unce</h1>
+						<p> A Full-Stack Devlopment Apprentice </p>
 
 						<div className='icons'>
-							<TwitterIcon className='icon' />
-							<InstagramIcon className='icon' />
-							<FacebookIcon className='icon' />
-							<LinkedInIcon className='icon' />
-							<PinterestIcon className='icon' />
+							<a
+								href='https://github.com/tyson-unce'
+								target={'_blank'}
+								rel='noreferrer'
+							>
+								<GitHubIcon className='icon' />
+							</a>
+							<a
+								href='https://linkedin.com/in/tysonunce/'
+								target={'_blank'}
+								rel='noreferrer'
+							>
+								<LinkedInIcon className='icon' />
+							</a>
+							<a
+								href='https://twitter.com/tysonunce2020'
+								target={'_blank'}
+								rel='noreferrer'
+							>
+								<TwitterIcon className='icon' />
+							</a>
+							<a
+								href='https://instagram.com/tysonunce'
+								target={'_blank'}
+								rel='noreferrer'
+							>
+								<InstagramIcon className='icon' />
+							</a>
+							<a
+								href='https://facebook.com/tysonunce'
+								target={'_blank'}
+								rel='noreferrer'
+							>
+								<FacebookIcon className='icon' />
+							</a>
 						</div>
 
 						<div className='buttons'>
-							<button>See My Work</button>
-							<button>Hire Me</button>
+							<a href='tysonresume.tiiny.site' download>
+								<button>Download my Resume</button>
+							</a>
 						</div>
 					</div>
 				</div>
 
 				<div className='main__img'>
-					<img src={man} alt='' />
+					<img src={'https://i.postimg.cc/QMjy0bKv/tyson-Unce.jpg'} alt='' />
 				</div>
 			</div>
 		</div>
