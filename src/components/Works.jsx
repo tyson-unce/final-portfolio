@@ -1,5 +1,4 @@
 import React from 'react';
-import wd3 from './assets/wd3.jpeg';
 import './styles/Works.scss';
 import netflix from './assets/netflixSS.png';
 import hopehacks from './assets/hopeHacksSS.png';
@@ -43,7 +42,7 @@ const Works = () => {
 					</a>
 				</div>
 
-				<div className='cards'></div>
+				<div></div>
 				<div className='cards'>
 					<img src={bot} alt='' />
 					<a
@@ -54,7 +53,7 @@ const Works = () => {
 						<button>Bot-o-mat</button>
 					</a>
 				</div>
-				<div className='cards'></div>
+				<div></div>
 			</div>
 		</div>
 	);
