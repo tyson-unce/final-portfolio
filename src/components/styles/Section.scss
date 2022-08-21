@@ -1,11 +1,7 @@
 .section {
 	width: 100%;
 	min-height: 100vh;
-	background: linear-gradient(
-		45deg,
-		rgba(101, 11, 228, 0.77),
-		rgba(244, 67, 2, 0.562)
-	);
+	background-color: #0b0c10;
 	overflow: hidden;
 }
 
@@ -30,7 +26,7 @@
 	text-align: center;
 
 	h1 {
-		color: #fff;
+		color: #66fcf1;
 		text-transform: uppercase;
 		font-size: 55px;
 		margin-bottom: 2.125rem;
@@ -38,17 +34,16 @@
 
 	p {
 		font-weight: bolder;
-		color: #fff;
+		color: #c5c6c7;
 		text-transform: uppercase;
-		border-bottom: 1px solid green;
-		box-shadow: 2px 2px 15px green;
+		box-shadow: 2px 2px 15px #1f2833;
 		padding: 6px;
 		margin-block: 7px;
 
 		&:hover {
 			transform: scale(110%);
 			transition: 250ms;
-			color: firebrick;
+			color: #45a29e;
 		}
 	}
 }
@@ -116,7 +111,7 @@
 			margin-block: 0px;
 			padding: 0px;
 			font-weight: normal;
-			box-shadow: 2px 2px 5px green;
+			box-shadow: 2px 2px 5px #1f2833;
 		}
 	}
 

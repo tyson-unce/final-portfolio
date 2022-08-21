@@ -44,9 +44,9 @@ const Contact = () => {
 	};
 	return (
 		<div className='contact' id='contactpage'>
-			<div className='inputs'>
-				<h1>Contact me</h1>
-				<form className='conForm' onSubmit={handleSubmit}>
+			<div>
+				<form className='inputs' onSubmit={handleSubmit}>
+					<h1>Contact me</h1>
 					<input
 						type='name'
 						name='name'
@@ -54,6 +54,7 @@ const Contact = () => {
 						value={formValues.name}
 						onChange={handleChange}
 					/>
+					<p className='formErrors'>{formErrors.name}</p>
 
 					<input
 						type='email'
@@ -62,14 +63,14 @@ const Contact = () => {
 						value={formValues.email}
 						onChange={handleChange}
 					/>
-
+					<p className='formErrors'>{formErrors.email}</p>
 					<input
 						name='feedback'
-						type='text'
 						placeholder='send me a message!'
 						value={formValues.message}
 						onChange={handleChange}
 					/>
+					<p className='formErrors'>{formErrors.feedback}</p>
 
 					<button type='submit' name='submit' value='Submit'>
 						Send
@@ -80,9 +81,6 @@ const Contact = () => {
 						''
 					)}
 				</form>
-				<p className='formErrors'>{formErrors.name}</p>
-				<p className='formErrors'>{formErrors.email}</p>
-				<p className='formErrors'>{formErrors.feedback}</p>
 			</div>
 		</div>
 	);

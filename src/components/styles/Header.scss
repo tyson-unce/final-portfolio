@@ -25,9 +25,10 @@ ul {
 			text-decoration: none;
 			text-transform: uppercase;
 			color: #000;
+			transition: 550ms;
 
 			&:hover {
-				border-bottom: 3px solid red;
+				color: #66fcf1;
 			}
 		}
 	}
