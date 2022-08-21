@@ -43,16 +43,7 @@ const Works = () => {
 					</a>
 				</div>
 
-				<div className='cards'>
-					<img src={wd3} alt='' />
-					<a
-						href='https://main.d1zo0b1ozl1ups.amplifyapp.com/'
-						target={'_blank'}
-						rel='noreferrer'
-					>
-						<button>See Work</button>
-					</a>
-				</div>
+				<div className='cards'></div>
 				<div className='cards'>
 					<img src={bot} alt='' />
 					<a
@@ -60,19 +51,10 @@ const Works = () => {
 						target={'_blank'}
 						rel='noreferrer'
 					>
-						<button>See Work</button>
+						<button>Bot-o-mat</button>
 					</a>
 				</div>
-				<div className='cards'>
-					<img src={bot} alt='' />
-					<a
-						href='https://master.d2t1q1va22szti.amplifyapp.com/'
-						target={'_blank'}
-						rel='noreferrer'
-					>
-						<button>See Work</button>
-					</a>
-				</div>
+				<div className='cards'></div>
 			</div>
 		</div>
 	);
