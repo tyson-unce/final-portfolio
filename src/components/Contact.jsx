@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { useState, useEffect } from 'react';
 import './styles/Contact.scss';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+	const form = useRef();
 	const initialValues = { email: '', feedback: '', name: '' };
 	const [formValues, setFormValues] = useState(initialValues);
 	const [formErrors, setFormErrors] = useState({});
@@ -13,16 +15,38 @@ const Contact = () => {
 		setFormValues({ ...formValues, [name]: value });
 	};
 
+	// const handleSubmit = (event) => {
+	// 	event.preventDefault();
+	// 	setFormErrors(validate(formValues));
+	// 	setIsSubmit(true);
+	// };
+	const sendEmail = (e) => {
+		console.log('sent');
+		emailjs
+			.sendForm(
+				'service_mbh5o2s',
+				'template_2jdwmbt',
+				form.current,
+				'tHwndaU8odSAb0r_Z'
+			)
+			.then(
+				(result) => {
+					console.log(result.text);
+				},
+				(error) => {
+					console.log(error.text);
+				}
+			);
+	};
 	const handleSubmit = (event) => {
 		event.preventDefault();
+		sendEmail();
+		event.target.reset();
 		setFormErrors(validate(formValues));
 		setIsSubmit(true);
 	};
-
 	useEffect(() => {
-		console.log(formErrors);
 		if (Object.keys(formErrors).length === 0 && isSubmit) {
-			console.log(formValues);
 		}
 	}, [formErrors]);
 
@@ -42,15 +66,16 @@ const Contact = () => {
 		}
 		return errors;
 	};
+
 	return (
 		<div className='contact' id='contactpage'>
 			<div>
-				<form className='inputs' onSubmit={handleSubmit}>
+				<form ref={form} className='inputs' onSubmit={handleSubmit}>
 					<h1>Contact me</h1>
 					<input
 						type='name'
 						name='name'
-						placeholder='Name'
+						placeholder='firstName lastName'
 						value={formValues.name}
 						onChange={handleChange}
 					/>
@@ -65,6 +90,7 @@ const Contact = () => {
 					/>
 					<p className='formErrors'>{formErrors.email}</p>
 					<input
+						type='text'
 						name='feedback'
 						placeholder='send me a message!'
 						value={formValues.message}
@@ -76,10 +102,13 @@ const Contact = () => {
 						Send
 					</button>
 					{Object.keys(formErrors).length === 0 && isSubmit ? (
-						<div className='uiMessage'>Thank you for your feedback!</div>
+						<div className='uiMessage'>
+							Thank you for your feedback! I will reach back out to you shortly!
+						</div>
 					) : (
 						''
 					)}
+					{/* {Object.keys(formErrors).length === 0 && isSubmit ? sendEmail() : ''} */}
 				</form>
 			</div>
 		</div>
