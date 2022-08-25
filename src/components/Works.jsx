@@ -4,6 +4,8 @@ import netflix from './assets/netflixSS.png';
 import hopehacks from './assets/hopeHacksSS.png';
 import ecom from './assets/ecomSS.png';
 import bot from './assets/botSS.png';
+import prison from './assets/prisonSS.png';
+import tracker from './assets/trackerSS.png';
 
 const Works = () => {
 	return (
@@ -42,7 +44,16 @@ const Works = () => {
 					</a>
 				</div>
 
-				<div></div>
+				<div className='cards'>
+					<img src={prison} alt='' />
+					<a
+						href='https://aaalaina.github.io/CodeForJustice-WrongfulConviction/'
+						target={'_blank'}
+						rel='noreferrer'
+					>
+						<button>Code For Justice</button>
+					</a>
+				</div>
 				<div className='cards'>
 					<img src={bot} alt='' />
 					<a
@@ -53,7 +64,16 @@ const Works = () => {
 						<button>Bot-o-mat</button>
 					</a>
 				</div>
-				<div></div>
+				<div className='cards'>
+					<img src={tracker} alt='' />
+					<a
+						href='https://master.dp6mcxw1qg1x6.amplifyapp.com/'
+						target={'_blank'}
+						rel='noreferrer'
+					>
+						<button>Task Tracker</button>
+					</a>
+				</div>
 			</div>
 		</div>
 	);
